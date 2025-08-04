@@ -13,13 +13,24 @@ lokalen PC.
 - Bereitstellung einer einfachen REST-API
 - Optionale Weboberfläche für komfortable Steuerung
 
-## Projektstruktur (geplant)
+## Projektstruktur
 
 ```
 microsoft-family-monitor/
 ├── backend/        # Node.js/Express REST API
+│   ├── controllers/
+│   ├── routes/
+│   ├── utils/
+│   ├── app.js
+│   ├── .env.example
+│   └── package.json
 ├── frontend/       # React Dashboard
-├── .env.example    # Beispiel für benötigte Umgebungsvariablen
+│   ├── src/
+│   │   ├── components/
+│   │   ├── App.jsx
+│   │   ├── api.js
+│   │   └── index.js
+│   └── package.json
 └── README.md
 ```
 
@@ -40,7 +51,7 @@ cd microsoft-family-monitor
 ```bash
 cd backend
 npm install
-cp ../.env.example .env   # Werte eintragen
+cp .env.example .env   # Werte eintragen
 npm run dev
 ```
 
@@ -82,4 +93,3 @@ Nutzungsbedingungen von Microsoft.
 ## Lizenz
 
 [MIT](LICENSE)
-
